@@ -1,14 +1,109 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>Hidden Gems — Index</title></head>
-<body>
-<h1>Hidden Gems</h1>
-<ul>
-  <li><a href="/gems/coffee.html">Hidden Alley Espresso</a></li>
-</ul>
+<head>
+  <meta charset="utf-8" />
+  <title>Hiking Club — Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
 
-<p><a href="/collections/studycafes.html">Collection: Quiet Study Cafés</a></p>
-<p><a href="/tags/cafe.html">Tag: Café</a></p>
-<p><a href="/users/marisa.html">User: Marisa</a></p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="index.html" aria-label="Cal Poly Hiking Club home">
+        <img
+          class="logo"
+          src="assets/logo.png"
+          alt=""
+          width="28" height="28"
+        />
+        <span>Cal Poly Hiking Club</span>
+      </a>
+      <a class="active" href="index.html">Home</a>
+      <a href="about/about.html">About</a>
+      <a href="hikes/hikes.html">Hikes</a>
+      <a href="trips/trips.html">Trips</a>
+      <a href="calendar/calendar.html">Calendar</a>
+      <a href="connect/connect.html">Connect</a>
+      <a href="login/login.html">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="landing-image">
+    <img src="assets/landing-image.jpg" alt="Picture of a hike">
+    <div class="landing-title">
+      <h1>Let's go on a hike.</h1>
+      <a class="btn" href="hikes/hikes.html">See Hikes</a>
+    </div>
+  </section>
+
+  <!-- Upcoming Hike -->
+  <div class="container upcoming">
+    <h1 class="section-title">This Week's Hike</h1>
+
+    <section class="featured-hike">
+      <img
+        class="hike-img"
+        src="assets/bishop-peak.jpg"
+        alt="Bishop Peak at sunrise"
+      />
+      <div class="hike-info">
+        <h2 class="hike-title">BISHOP PEAK SUNRISE</h2>
+        <p class="hike-when">Sun, Oct 19 · 6:30 AM</p>
+        <ul class="hike-stats">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 19h18L13 6l-3 5-2-2-5 10z" fill="currentColor"/>
+            </svg>
+            <span>Moderate</span>
+          </li>
+        
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 7c3 0 3 10 6 10s3-10 6-10 3 10 6 10" 
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round"/>
+            </svg>
+            <span>3.5 mi</span>
+          </li>
+        
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 17l6-6 4 4 6-8" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>950 ft</span>
+          </li>
+        </ul>
+        
+        <a class="btn" href="hikes/hikes.html">See Hikes</a>
+      </div>
+    </section>
+  </div>
+
+  
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <span>© Cal Poly Hiking Club</span><span>•</span><span>Contact: hiking@calpoly.edu</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,268 @@
+/* Theme and fonts */
+:root {
+    --bg: #E8DCC5;
+    --ink: #545928;
+    --muted: #545928;
+    --accent: #E8DCC5;
+    --accent-ink: #545928;
+    --headline-font: "Londrina Solid", sans-serif;
+    --font-2: "Poppins", sans-serif;
+    --font-3: "Space Mono", monospace;
+  }
+  
+  /* Layout */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans";
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 0 0 0 4rem;
+    max-width: 1200px;
+  }
+  
+  /* Page titles */
+  .section-title,
+  main h1,
+  main h2 {
+    margin: 3rem 0 1.25rem;
+    font-family: var(--font-3);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 900px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    filter: brightness(1.06);
+    text-decoration: underline;
+  }
+  
+  .upcoming .btn {
+    margin-top: .5rem;
+    padding: .9rem 2rem;
+    border-radius: 999px;
+    background: var(--accent-ink);
+    color: var(--accent);
+    border: 2px solid var(--accent-ink);
+  }
+  
+  .upcoming .btn:hover {
+    filter: none;
+    opacity: .95;
+  }
+  
+  /* Upcoming hike */
+  .upcoming {
+    padding-block: 2rem;
+  }
+  
+  .featured-hike {
+    display: grid;
+    grid-template-columns: minmax(520px, 48vw) 1fr;
+    align-items: start;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    padding: 0;
+  }
+  
+  .hike-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+  
+  .hike-info {
+    padding-top: 0;
+  }
+  
+  .hike-title {
+    margin: 0 0 .5rem 0;
+    padding-left: 0;
+    font-family: var(--font-2);
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: .01em;
+    font-weight:bold;
+  }
+  
+  .hike-when {
+    margin: .25rem 0 1rem;
+    display: inline-block;
+    padding: .4rem .7rem;
+    border: 3px solid rgba(0, 0, 0, .06);
+    border-radius: 20px;
+    font-weight: 600;
+    color: #6b705c;
+  }
+  
+  .hike-stats {
+    list-style: none;
+    padding: 0;
+    margin: .75rem 0 1.25rem;
+    display: grid;
+    row-gap: .5rem;
+    color: #545928;
+  }
+  
+  .hike-stats li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  
+  .hike-stats .icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: #6b705c;
+  }
+  
+  /* Past hikes grid */
+  .past-hikes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 1rem 0 3rem;
+  }
+  
+  .past-card {
+    overflow: hidden;
+  }
+  
+  .past-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .past-body {
+    padding: 1rem 1rem 1.1rem;
+    font-family: var(--font-2);
+    font-weight: lighter;
+  }
+  
+  .past-body h3 {
+    margin: .2rem 0 .2rem 0;
+    font-family: var(--headline-font);
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  .past-meta {
+    margin: 0;
+    color: #6b705c;
+    font-weight: 600;
+  }
+  
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--ink);
+    margin-top: 3rem;
+    padding: 1rem 0;
+    color: #6b7280;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 900px) {
+    .featured-hike {
+      grid-template-columns: 1fr;
+    }
+  
+    .hike-title {
+      font-size: 2.25rem;
+    }
+  
+    .past-hikes {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* HEADER / NAV */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--ink);
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    flex-wrap: nowrap;
+  }
+  
+  nav .brand {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-right: auto;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--accent);
+  }
+  
+  nav .brand .logo {
+    width: 28px;
+    height: 28px;
+    display: block;
+    object-fit: contain;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    opacity: .9;
+    margin: 0 .35rem;
+    font-family: var(--font-2);
+  }
+  
+  nav a:hover {
+    opacity: 1;
+  }
+  
+  nav a.active {
+    text-decoration: underline;
+  }
+  
+  /* Mobile */
+  @media (max-width: 820px) {
+    nav {
+      flex-wrap: wrap;
+      row-gap: .4rem;
+    }
+    nav .brand {
+      margin-right: 0;
+      flex-basis: 100%;
+      justify-content: center;
+    }
+  }
+  

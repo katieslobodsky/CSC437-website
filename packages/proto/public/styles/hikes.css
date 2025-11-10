@@ -30,7 +30,7 @@
   
   .container {
     margin: 0 auto;
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 0;
     max-width: 1200px;
   }
   
@@ -179,30 +179,7 @@
     font-weight: 600;
   }
   
-  /* Footer */
-  footer {
-    border-top: 1px solid var(--ink);
-    margin-top: 3rem;
-    padding: 1rem 0;
-    color: #6b7280;
-  }
-  
-  /* Responsiveness */
-  @media (max-width: 900px) {
-    .featured-hike {
-      grid-template-columns: 1fr;
-    }
-  
-    .hike-title {
-      font-size: 2.25rem;
-    }
-  
-    .past-hikes {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* HEADER / NAV */
+  /* Header/Nav */
 header {
     position: sticky;
     top: 0;
@@ -263,6 +240,29 @@ header {
       margin-right: 0;
       flex-basis: 100%;
       justify-content: center;
+    }
+  }
+
+    /* Footer */
+  footer {
+    border-top: 1px solid var(--ink);
+    margin-top: 3rem;
+    padding: 1rem 0;
+    color: #6b7280;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 900px) {
+    .featured-hike {
+      grid-template-columns: 1fr;
+    }
+  
+    .hike-title {
+      font-size: 2.25rem;
+    }
+  
+    .past-hikes {
+      grid-template-columns: 1fr;
     }
   }
   

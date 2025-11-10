@@ -1,0 +1,49 @@
+:root {
+    /* Light mode defaults */
+    --bg: #E8DCC5;
+    --nav-bg: #545928;
+    --ink: #545928;
+    --muted: #545928;
+    --accent: #E8DCC5;
+    --headline-font: "Londrina Solid", sans-serif;
+    --font-2: "Poppins", sans-serif;
+    --font-3: "Space Mono", monospace;
+    --accent-ink: #545928;
+  }
+  
+  /* Dark mode overrides */
+  body.dark-mode {
+    --bg: #503B28;
+    --bg-2: #545928;
+    --ink: #E8DCC5;
+    --muted: #503B28;
+  }
+  
+  /* Global usage */
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-2);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Headings and hero text use accent color */
+  h1, h2, h3,
+  .landing-title h1 {
+    font-family: var(--headline-font);
+    color: var(--accent);
+    transition: color 0.3s ease;
+  }
+  
+  /* Buttons or highlighted text */
+  .btn {
+    background-color: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  

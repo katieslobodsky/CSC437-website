@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <title>Hiking Club — Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles/index.css" />
-  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/tokens.css">
   <!--dark mode-->
-  <script type="module" src="scripts/darkmode.js"></script>
+  <script type="module" src="/scripts/darkmode.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
         <a class="brand" href="index.html" aria-label="Cal Poly Hiking Club home">
           <img
             class="logo"
-            src="assets/logo.png"
+            src="/assets/logo.png"
             alt=""
             width="28"
             height="28"
@@ -49,7 +49,7 @@
 
   <main>
     <section class="landing-image">
-      <img src="assets/landing-image.jpg" alt="Picture of a hike">
+      <img src="/assets/landing-image.jpg" alt="Picture of a hike">
           <!-- dark-mode toggle -->
       <div class="theme-toggle hero-toggle">
         <span class="label-light">Light</span>
@@ -70,7 +70,18 @@
     <div class="container upcoming">
       <h1 class="section-title">This Week's Hike</h1>
 
-      <section class="featured-hike">
+      <featured-hike
+        img-src="/assets/bishop-peak.jpg"
+        img-alt="Bishop Peak at sunrise"
+        href="/hikes/hikes.html"
+        difficulty="Moderate"
+        distance="3.5 mi"
+        elevation="950 ft"
+      >
+        Bishop Peak Sunrise
+        <span slot="when">Sun, Oct 19 · 6:30 AM</span>
+      </featured-hike>
+      <!-- <section class="featured-hike">
         <img
           class="hike-img"
           src="assets/bishop-peak.jpg"
@@ -104,10 +115,9 @@
               <span>950 ft</span>
             </li>
           </ul>
-          
           <a class="btn" href="hikes/hikes.html">See Hikes</a>
         </div>
-      </section>
+      </section>> -->
     </div>
 
     
@@ -120,5 +130,14 @@
       </div>
     </div>
   </footer>
+  <script type="module">
+    import { define } from "@calpoly/mustang";
+    import { FeaturedHikeElement } from "/src/featured-hike.ts";
+  
+    define({
+      "featured-hike": FeaturedHikeElement
+    });
+  </script>
+  
 </body>
 </html>

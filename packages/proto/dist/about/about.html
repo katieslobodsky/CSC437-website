@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Hiking Club — About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/about.css" />
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <script type="module" src="/scripts/darkmode.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="../index.html" aria-label="Cal Poly Hiking Club home">
+          <img
+            class="logo"
+            src="../assets/logo.png"
+            alt=""
+            width="28" height="28"
+          />
+          <span>Cal Poly Hiking Club</span>
+        </a>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../about/about.html">About</a>
+        <a href="../hikes/hikes.html">Hikes</a>
+        <a href="../trips/trips.html">Trips</a>
+        <a href="../calendar/calendar.html">Calendar</a>
+        <a href="../connect/connect.html">Connect</a>
+        <a href="../login/login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container about">
+    <section class="about-grid">
+
+      <!-- LEFT IMAGE -->
+      <figure class="about-hero">
+        <img src="../assets/about.png" alt="Group of hikers at sunset">
+      </figure>
+    
+      <!-- RIGHT: title + text -->
+      <div class="about-content">
+        <h1 class="page-title">ABOUT</h1>
+        <p class="lede">
+          We’re the Cal Poly Hiking and Backpacking Club. We host a weekly hike in San Luis Obispo County every week,
+          and we organize a couple of backpacking trips each quarter to amazing places across California,
+          from the coast to the Sierra and beyond. All levels are welcome.
+        </p>
+        <img src="../assets/starsquiggle.png" alt = "Stars and squiggles" class="starsquiggle">
+      </div>
+    
+      <section class="safety" aria-labelledby="safety-title">
+        <div class="safety__header" role="group" aria-labelledby="safety-title">
+          <h2 id="safety-title">Tips for hikes and trips</h2>
+        </header>
+        <ul class="safety__grid">
+          <li class="safety__card">
+            <div class="safety__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M9 2h6v2h-1a1 1 0 0 0-1 1v1h2a1 1 0 0 1 1 1v14a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1h2V5a1 1 0 0 0-1-1H9V2zM8 10h8v10a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V10z"/>
+              </svg>
+            </div>
+            <h3 class="safety__title">Be prepared</h3>
+            <p class="safety__text">Bring water, snacks, layers, sun protection, and sturdy shoes.</p>
+          </li>
+    
+          <li class="safety__card">
+            <div class="safety__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M7 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm10 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM2 20a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v2H2v-2zm13 0a6.97 6.97 0 0 1 3.2-5.88A5 5 0 0 1 22 19.5V22h-7v-2z"/>
+              </svg>
+            </div>
+            <h3 class="safety__title">Buddy system</h3>
+            <p class="safety__text">Stay with the group. Speak up if you need a pace or water break.</p>
+          </li>
+    
+          <li class="safety__card">
+            <div class="safety__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M20 4c-6 0-10 2-12 6-2 4 0 8 4 10 4-2 6-6 6-12 0-.68-.06-1.33-.18-1.95A14 14 0 0 1 20 4zM4 20s3-1 6-4c-2-1-4-3-5-5-1 3-1 6-1 9z"/>
+              </svg>
+            </div>
+            <h3 class="safety__title">Leave No Trace</h3>
+            <p class="safety__text">Pack out all trash, stick to trails, respect wildlife & other hikers.</p>
+          </li>
+    
+          <li class="safety__card">
+            <div class="safety__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 2 1 21h22L12 2zm0 5 3 5h-2l-1 2-2-3H8l4-4z"/>
+              </svg>
+            </div>
+            <h3 class="safety__title">Know your limits</h3>
+            <p class="safety__text">Choose mileage and elevation that match your experience and fitness.</p>
+          </li>
+        </ul>
+      </section>
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <span>© Cal Poly Hiking Club</span><span>•</span><span>Contact: hiking@calpoly.edu</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

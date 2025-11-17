@@ -223,7 +223,7 @@ body.dark-mode .slider {
   width: 20px;
   left: 3px;
   top: 3px;
-  background-color: #fff;
+  background-color: var(--accent);
   border-radius: 50%;
   transition: 0.4s;
 }
@@ -316,19 +316,6 @@ body.dark-mode .slider {
   filter: brightness(1.1);
   transform: translateY(-2px);
   text-decoration: none;
-}
-
-.upcoming .btn {
-  background: var(--accent);
-  color: var(--accent-ink);
-  border: 2px solid var(--accent-ink);
-  border-radius: 999px;
-  transition: background 0.3s ease, transform 0.15s ease;
-}
-
-.upcoming .btn:hover {
-  filter: brightness(0.95);
-  transform: translateY(-2px);
 }
 
 /* Sections/Titles/Content */

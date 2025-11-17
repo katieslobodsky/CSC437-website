@@ -70,17 +70,19 @@
     <div class="container upcoming">
       <h1 class="section-title">This Week's Hike</h1>
 
-      <featured-hike
-        img-src="/assets/bishop-peak.jpg"
-        img-alt="Bishop Peak at sunrise"
-        href="/hikes/hikes.html"
-        difficulty="Moderate"
-        distance="3.5 mi"
-        elevation="950 ft"
-      >
-        Bishop Peak Sunrise
-        <span slot="when">Sun, Oct 19 · 6:30 AM</span>
-      </featured-hike>
+      <hike-list src="/data/hikes.json">
+        <featured-hike
+          img-src="/assets/bishop-peak.jpg"
+          img-alt="Bishop Peak at sunrise"
+          href="/hikes/hikes.html"
+          difficulty="Moderate"
+          distance="3.5 mi"
+          elevation="950 ft"
+        >
+          Bishop Peak Sunrise
+          <span slot="when">Sun, Oct 19 · 6:30 AM</span>
+        </featured-hike>
+      </hike-list>      
       <!-- <section class="featured-hike">
         <img
           class="hike-img"
@@ -133,11 +135,13 @@
   <script type="module">
     import { define } from "@calpoly/mustang";
     import { FeaturedHikeElement } from "/src/featured-hike.ts";
+    import { HikeListElement } from "/src/hike-list.ts";
   
     define({
-      "featured-hike": FeaturedHikeElement
+      "featured-hike": FeaturedHikeElement,
+      "hike-list": HikeListElement
     });
-  </script>
+  </script>  
   
 </body>
 </html>

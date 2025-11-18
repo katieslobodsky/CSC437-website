@@ -17,25 +17,24 @@ export class HikeListElement extends LitElement {
   @property() src?: string;          
   @state() private hikes: Hike[] = [];
 
-  static styles = css`
-    :host { display: block; }
-    .list { display: grid; gap: 2rem; }
-  `;
-
   connectedCallback() {
     super.connectedCallback();
-    if (this.src) this.hydrate(this.src);
+    if (this.src) {
+        this.hydrate(this.src);
+    }
   }
 
   private async hydrate(url: string) {
     try {
       const res = await fetch(url);
-      if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+      if (!res.ok) {
+        throw new Error(`Fetch failed: ${res.status}`);
+      }
+      // reactive update
       const json = (await res.json()) as Hike[] | Hike;
-
-      // Support either a single object or an array in the JSON
-      this.hikes = Array.isArray(json) ? json : [json];
-    } catch (err) {
+      this.hikes = json as Hike[];
+    }
+    catch (err) {
       console.error("Failed to load hikes:", err);
       this.hikes = [];
     }

@@ -24,7 +24,7 @@ module.exports = __toCommonJS(hike_svc_exports);
 var import_mongoose = require("mongoose");
 const HikeSchema = new import_mongoose.Schema(
   {
-    title: String,
+    title: { type: String, required: true },
     when: String,
     imgSrc: String,
     imgAlt: String,
@@ -37,9 +37,24 @@ const HikeSchema = new import_mongoose.Schema(
 );
 const HikeModel = (0, import_mongoose.model)("Hike", HikeSchema);
 function index() {
-  return HikeModel.find();
+  return HikeModel.find().exec();
 }
-function get(title) {
-  return HikeModel.findOne({ title });
+function get(id) {
+  return HikeModel.findById(id).exec();
 }
-var hike_svc_default = { index, get };
+function create(json) {
+  const hike = new HikeModel(json);
+  return hike.save();
+}
+function update(id, json) {
+  return HikeModel.findByIdAndUpdate(id, json, { new: true }).then((updated) => {
+    if (!updated) throw `${id} not updated`;
+    return updated;
+  });
+}
+function remove(id) {
+  return HikeModel.findByIdAndDelete(id).then((deleted) => {
+    if (!deleted) throw `${id} not deleted`;
+  });
+}
+var hike_svc_default = { index, get, create, update, remove };

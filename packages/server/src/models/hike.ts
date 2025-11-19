@@ -1,4 +1,5 @@
 export interface Hike {
+    _id?: string;
     title: string;
     when: string;
     imgSrc: string;
@@ -7,4 +8,5 @@ export interface Hike {
     difficulty: string;
     distance: string;
     elevation: string;
-}  
+}
+  

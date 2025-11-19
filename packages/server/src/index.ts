@@ -5,7 +5,7 @@ import Hikes from "./services/hike-svc";
 import hikes from "./routes/hikes";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 const staticDir = process.env.STATIC || "public";
 
 app.use(express.static(staticDir));

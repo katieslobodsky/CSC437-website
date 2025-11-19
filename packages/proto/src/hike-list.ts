@@ -1,5 +1,5 @@
 // src/hike-list.ts
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 import { property, state } from "lit/decorators.js";
 
 type Hike = {

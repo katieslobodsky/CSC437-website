@@ -1,0 +1,86 @@
+/* Center everything */
+.login-wrapper {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  /* Card */
+  .login-card {
+    background: #ffffff;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  
+  /* Heading */
+  .login-heading {
+    font-family: var(--font-3);
+    font-size: 2.4rem;
+    margin-bottom: .5rem;
+    color: var(--ink);
+  }
+  
+  /* Subtext */
+  .login-subtext {
+    color: #6b6b6b;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Force vertical stack */
+  .field {
+    margin-bottom: 1.2rem;
+  }
+  
+  .field label {
+    display: block;
+    font-weight: 600;
+    font-family: var(--font-2);
+    color: var(--ink);
+  }
+  
+  .field input {
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 0.35rem;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    background: #f8f8f8;
+  }
+  
+  /* Submit button — Shadow DOM handles colors */
+  login-form button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: .75rem;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  login-form button:hover {
+    opacity: .9;
+  }
+  
+  /* Signup link */
+  .signup-text {
+    margin-top: 1.4rem;
+    font-size: .95rem;
+  }
+  
+  .signup-text a {
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: underline;
+  }
+  

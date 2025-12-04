@@ -24,29 +24,21 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var import_express = __toESM(require("express"));
 var import_path = __toESM(require("path"));
 var import_mongo = require("./services/mongo");
-var import_hike_svc = __toESM(require("./services/hike-svc"));
+var import_auth = __toESM(require("./routes/auth"));
 var import_hikes = __toESM(require("./routes/hikes"));
 (0, import_mongo.connect)("hikingclub");
 const app = (0, import_express.default)();
 const port = process.env.PORT || 3e3;
-const DIST = import_path.default.join(__dirname, "../../proto/dist");
+const PUBLIC = import_path.default.join(__dirname, "../../proto/public");
 app.use(import_express.default.json());
-app.use(import_express.default.static(DIST));
-app.use("/api/hikes", import_hikes.default);
+app.use(import_express.default.static(PUBLIC));
+app.use("/auth", import_auth.default);
+app.use("/api/hikes", import_auth.authenticateUser, import_hikes.default);
 app.get("/hello", (req, res) => {
   res.send("Hello, World");
 });
-app.get("/hikes/:title", (req, res) => {
-  import_hike_svc.default.get(req.params.title).then((data) => {
-    if (data) {
-      res.json(data);
-    } else {
-      res.status(404).send();
-    }
-  });
-});
-app.get(/.*/, (req, res) => {
-  res.sendFile(import_path.default.join(DIST, "index.html"));
+app.get("/", (req, res) => {
+  res.sendFile(import_path.default.join(PUBLIC, "index.html"));
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

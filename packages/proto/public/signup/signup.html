@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Hiking Club — Login</title>
+  <title>Hiking Club — Sign Up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="stylesheet" href="../styles/hikes.css" />
@@ -10,33 +10,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="importmap">
     {
       "imports": {
         "@calpoly/mustang": "https://unpkg.com/@calpoly/mustang/dist/mustang.js",
+    
         "lit": "https://unpkg.com/lit@2.8.0/index.js",
         "lit-html": "https://unpkg.com/lit-html@2.8.0/lit-html.js",
         "lit-html/is-server.js": "https://unpkg.com/lit-html@2.8.0/is-server.js",
+    
         "@lit/reactive-element": "https://unpkg.com/@lit/reactive-element@1.6.3/reactive-element.js",
+    
         "lit-element/lit-element.js": "https://unpkg.com/lit-element@3.3.0/lit-element.js"
       }
     }
-  </script>
-
+    </script>
+    
   <script type="module">
     import { define, Auth } from "@calpoly/mustang";
     import { LoginFormElement } from "../scripts/auth/login-form.js";
-
+  
     define({
       "mu-auth": Auth.Provider,
       "login-form": LoginFormElement
     });
-  </script>
+  </script>  
 </head>
 
 <body>
@@ -53,32 +53,33 @@
         <a href="../trips/trips.html">Trips</a>
         <a href="../calendar/calendar.html">Calendar</a>
         <a href="../connect/connect.html">Connect</a>
-        <a class="active" href="../login/login.html">Login</a>
+        <a href="../login/login.html">Login</a>
       </nav>
     </div>
   </header>
 
   <mu-auth>
     <main class="signup-page">
-      <h1>Welcome back!</h1>
-
-      <login-form api="/auth/login" redirect="/">
+      <h1>Sign Up</h1>
+  
+      <login-form api="/auth/register" redirect="/">
         <label>
           Username
           <input name="username" autocomplete="off" />
         </label>
-
+      
         <label>
           Password
           <input type="password" name="password" />
         </label>
-      </login-form>
 
+      </login-form>      
+  
       <p class="login-link">
-        New here? <a href="../signup/signup.html">Create an account</a>
+        Already have an account? <a href="../login/login.html">Log in</a>
       </p>
     </main>
-  </mu-auth>
+  </mu-auth>  
 
   <footer>
     <div class="container">
